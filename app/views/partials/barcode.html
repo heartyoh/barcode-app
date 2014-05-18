@@ -1,0 +1,138 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div class="row">
+  <div class="col-xs-4">
+    
+    <div class="form-group">
+      <label>Type</label>
+      <select class="form-control" ng-model="type" ng-options="type.desc for type in types"></select>
+    </div>
+    
+    <div class="form-group">
+      <label>Text</label>
+      <input type="text" ng-model="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label>Alternate Text</label>
+      <input type="text" ng-model="alttext" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>Rotate</label>
+      <select class="form-control" ng-model="rotate" ng-options="opt.label + '&deg;' for opt in rotates"></select>
+    </div>
+
+    <div class="form-group">
+      <label>Width Scale</label>
+      <select class="form-control" ng-model="scale.width" ng-options="opt for opt in scales"></select>
+    </div>
+    <div class="form-group">
+      <label>Height Scale</label>
+      <select class="form-control" ng-model="scale.height" ng-options="opt for opt in scales"></select>
+    </div>
+    <div class="form-group">
+      <label>Width</label>
+      <input type="text" ng-model="width" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label>Height</label>
+      <input type="text" ng-model="height" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>Rows</label>
+      <input type="text" ng-model="rows" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label>Columns</label>
+      <input type="text" ng-model="columns" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>Bar Color</label>
+      <input type="text" ng-model="barcolor" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label>Background Color</label>
+      <input type="text" ng-model="backgroundcolor" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>Segments</label>
+      <input type="number" ng-model="segments" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>Version</label>
+      <input type="number" ng-model="version" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>CCVersion</label>
+      <input type="text" ng-model="ccversion" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>CCColumns</label>
+      <input type="text" ng-model="cccolumns" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>Format</label>
+      <input type="text" ng-model="format" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>ECLevel</label>
+      <input type="text" ng-model="eclevel" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label class="checkbox">
+        <input type="checkbox" ng-model="includetext" />
+          Include Text ?
+      </label> 
+      <label class="checkbox">
+        <input type="checkbox" ng-model="guardwhitespace" />
+          Guard White Space
+      </label> 
+      <label class="checkbox">
+        <input type="checkbox" ng-model="parsefnc" />
+          Parse FNC
+      </label> 
+      <label class="checkbox">
+        <input type="checkbox" ng-model="includecheckintext" />
+          Include Check in Text
+      </label> 
+      <label class="checkbox">
+        <input type="checkbox" ng-model="showborder" />
+          Show Border
+      </label> 
+      <label class="checkbox">
+        <input type="checkbox" ng-model="includecheck" />
+          Include Check
+      </label> 
+      <label class="checkbox">
+        <input type="checkbox" ng-model="numeric" />
+          Numeric
+      </label>
+    </div>
+
+  </div>
+
+  <div class="col-xs-8">
+    <img ng-src="{{update()}}" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 form-group">
+    <label>URL</label>
+    <input type="text" ng-model="url" class="form-control"/>
+    <button class="btn btn-default">Copy URL</button>
+  </div>
+</div>
+
+<div class="footer">
+  <p>♥ from the Hatio, Lab. team</p>
+</div>
